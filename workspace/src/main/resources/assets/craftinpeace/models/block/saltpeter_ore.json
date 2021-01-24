@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "craftinpeace:blocks/saltpeter_ore",
+    "particle": "craftinpeace:blocks/saltpeter_ore"
+  }
+}

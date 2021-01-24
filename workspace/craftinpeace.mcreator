@@ -1,0 +1,610 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "MonsterManager",
+      "type": "code",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "monster_manager"
+    },
+    {
+      "name": "MagmaFurnace",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace"
+    },
+    {
+      "name": "MagmaFurnaceGui",
+      "type": "gui",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_gui"
+    },
+    {
+      "name": "MagmaFurnaceUpdateTick",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagmaFurnaceRecipe",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_recipe"
+    },
+    {
+      "name": "SaltpeterOre",
+      "type": "block",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "saltpeter_ore"
+    },
+    {
+      "name": "SaltpeterOreLoot",
+      "type": "loottable",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "saltpeter_ore_loot"
+    },
+    {
+      "name": "BoneDrops",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bone_drops",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WitherRose",
+      "type": "plant",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wither_rose"
+    },
+    {
+      "name": "WitherRoseMobplayerCollidesWithPlant",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wither_rose_mobplayer_collides_with_plant",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SkeletonSkullDrops",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "skeleton_skull_drops",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnderOre",
+      "type": "block",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ender_ore"
+    },
+    {
+      "name": "Marekanite",
+      "type": "plant",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "marekanite"
+    },
+    {
+      "name": "MagmaFurnaceRecipeWitherSkull",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_recipe_wither_skull",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagmaFurnaceRecipeSlimeball",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_recipe_slimeball",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagmaFurnaceRecipeGhastTear",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_recipe_ghast_tear",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagmaFurnaceRecipePrismarineShard",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_recipe_prismarine_shard",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StellarCrystal",
+      "type": "item",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stellar_crystal"
+    },
+    {
+      "name": "StellarCrystalRecipe",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stellar_crystal_recipe"
+    },
+    {
+      "name": "MagmaFurnaceRecipeNetherStar",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_recipe_nether_star",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Configuration",
+      "type": "code",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "configuration"
+    },
+    {
+      "name": "GunpowderRecipe",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gunpowder_recipe"
+    },
+    {
+      "name": "EnderDust",
+      "type": "item",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ender_dust"
+    },
+    {
+      "name": "MagmaFurnaceRecipeEnderPearl",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_recipe_ender_pearl",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sulfur",
+      "type": "item",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sulfur"
+    },
+    {
+      "name": "PyriteOre",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyrite_ore"
+    },
+    {
+      "name": "PyriteOreLoot",
+      "type": "loottable",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyrite_ore_loot"
+    },
+    {
+      "name": "Saltpeter",
+      "type": "item",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "saltpeter"
+    },
+    {
+      "name": "GoldRod",
+      "type": "item",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_rod"
+    },
+    {
+      "name": "GoldRodRecipe",
+      "type": "recipe",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_rod_recipe"
+    },
+    {
+      "name": "MagmaFurnaceRecipeBlazeRod",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_furnace_recipe_blaze_rod",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DustsEnderTag",
+      "type": "tag",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dusts_ender_tag"
+    },
+    {
+      "name": "DustsSulfurTag",
+      "type": "tag",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dusts_sulfur_tag"
+    },
+    {
+      "name": "DustsSaltpeterTag",
+      "type": "tag",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dusts_saltpeter_tag"
+    },
+    {
+      "name": "RodsGoldTag",
+      "type": "tag",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rods_gold_tag"
+    },
+    {
+      "name": "BlocksSaltpeterTag",
+      "type": "tag",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_saltpeter_tag"
+    },
+    {
+      "name": "BlocksEnderTag",
+      "type": "tag",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_ender_tag"
+    },
+    {
+      "name": "BlocksPyriteTag",
+      "type": "tag",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_pyrite_tag"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.peacefulcraft.ender_ore": "Ender Ore",
+      "item.peacefulcraft.ender_dust": "Ender Dust",
+      "block.craftinpeace.ender_ore": "Ender Ore",
+      "item.peacefulcraft.gold_rod": "Gold Rod",
+      "block.craftinpeace.wither_rose": "Wither Rose",
+      "block.peacefulcraft.saltpeter_ore": "Saltpeter Ore",
+      "item.craftinpeace.stellar_crystal": "Stellar Crystal",
+      "item.craftinpeace.sulfur": "Sulfur",
+      "item.peacefulcraft.stellar_crystal": "Stellar Crystal",
+      "block.peacefulcraft.pyrite_ore": "Pyrite Ore",
+      "item.peacefulcraft.saltpeter": "Saltpeter",
+      "block.craftinpeace.magma_furnace": "Magma Furnace",
+      "block.peacefulcraft.marekanite": "Marekanite",
+      "block.craftinpeace.saltpeter_ore": "Saltpeter Ore",
+      "block.peacefulcraft.wither_rose": "Wither Rose",
+      "item.peacefulcraft.sulfur": "Sulfur",
+      "item.craftinpeace.ender_dust": "Ender Dust",
+      "item.craftinpeace.saltpeter": "Saltpeter",
+      "block.craftinpeace.marekanite": "Marekanite",
+      "item.craftinpeace.gold_rod": "Gold Rod",
+      "block.peacefulcraft.magma_furnace": "Magma Furnace",
+      "block.craftinpeace.pyrite_ore": "Pyrite Ore"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "craftinpeace",
+    "modName": "Craft in Peace",
+    "version": "1.0.0",
+    "description": "Peaceful crafting on any difficulty.",
+    "author": "Ryan Skeldon",
+    "websiteURL": "https://github.com/psykad/craft-in-peace",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.15.2",
+    "credits": "Inspired by BadMobs and Peaceful+!",
+    "modElementsPackage": "net.mcreator.craftinpeace",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000547520
+}

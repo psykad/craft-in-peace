@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+
+[[mods]]
+modId="craftinpeace"
+version="1.0.0"
+displayName="Craft in Peace"
+credits="Inspired by BadMobs and Peaceful+!"
+displayURL="https://github.com/psykad/craft-in-peace"
+authors="Ryan Skeldon"
+description='''
+Peaceful crafting on any difficulty.
+'''
+
+[[dependencies.craftinpeace]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

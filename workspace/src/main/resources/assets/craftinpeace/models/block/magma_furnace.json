@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craftinpeace:blocks/forge_top_bottom",
+    "up": "craftinpeace:blocks/forge_top_bottom",
+    "north": "craftinpeace:blocks/forge_front",
+    "east": "craftinpeace:blocks/forge_side",
+    "south": "craftinpeace:blocks/forge_side",
+    "west": "craftinpeace:blocks/forge_side",
+    "particle": "craftinpeace:blocks/forge_top_bottom"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "craftinpeace:blocks/wither_rose",
+    "particle": "craftinpeace:blocks/wither_rose"
+  }
+}

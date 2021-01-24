@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "TAG:forge:dusts/sulfur"
+      },
+      {
+        "value": "TAG:forge:dusts/saltpeter"
+      },
+      {
+        "value": "TAG:forge:dusts/saltpeter"
+      },
+      {
+        "value": "Items.COAL#1"
+      },
+      {
+        "value": "TAG:forge:dusts/saltpeter"
+      },
+      {
+        "value": "TAG:forge:dusts/saltpeter"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Items.GUNPOWDER"
+    },
+    "name": "gunpowder",
+    "namespace": "minecraft"
+  }
+}

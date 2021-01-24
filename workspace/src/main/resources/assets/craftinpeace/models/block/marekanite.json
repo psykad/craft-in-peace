@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "craftinpeace:blocks/marekanite",
+    "particle": "craftinpeace:blocks/marekanite"
+  }
+}

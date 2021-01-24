@@ -1,0 +1,42 @@
+{
+  "group": "craftinpeace",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:ghast_tear"
+    },
+    "1": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "2": {
+      "item": "minecraft:ghast_tear"
+    },
+    "3": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "4": {
+      "item": "minecraft:wither_rose"
+    },
+    "5": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "6": {
+      "item": "minecraft:ghast_tear"
+    },
+    "7": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "8": {
+      "item": "minecraft:ghast_tear"
+    }
+  },
+  "result": {
+    "item": "craftinpeace:stellar_crystal",
+    "count": 1
+  }
+}
