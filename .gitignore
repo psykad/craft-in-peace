@@ -20,3 +20,6 @@ bin/
 build/
 run/
 workspace/.classpath
+
+# VS Code
+.vscode/
