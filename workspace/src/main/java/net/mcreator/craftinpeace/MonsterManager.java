@@ -5,9 +5,7 @@ import java.util.List;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingSpawnEvent.CheckSpawn;
-import net.minecraftforge.event.entity.living.LivingSpawnEvent.SpecialSpawn;
-import net.minecraftforge.eventbus.api.Event.Result;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -60,18 +58,10 @@ public class MonsterManager extends CraftinpeaceModElements.ModElement {
       deniedEntities.add(ForgeRegistries.ENTITIES.getValue(entity));
     }
 
-    MinecraftForge.EVENT_BUS.addListener(this::checkSpawn);
-    MinecraftForge.EVENT_BUS.addListener(this::specialSpawn);
+    MinecraftForge.EVENT_BUS.addListener(this::onEntityJoinWorld);
   }
 
-  private void checkSpawn(CheckSpawn event) {
-    if (deniedEntities.contains(event.getEntity().getType())) {
-      event.getEntity().remove();
-      event.setResult(Result.DENY);
-    }
-  }
-
-  private void specialSpawn(SpecialSpawn event) {
+  private void onEntityJoinWorld(EntityJoinWorldEvent event) {
     if (deniedEntities.contains(event.getEntity().getType())) {
       event.getEntity().remove();
       event.setCanceled(true);

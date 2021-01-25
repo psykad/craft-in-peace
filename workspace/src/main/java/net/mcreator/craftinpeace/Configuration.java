@@ -7,7 +7,6 @@ import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
-import org.lwjgl.Version.BuildType;
 
 @CraftinpeaceModElements.ModElement.Tag
 public class Configuration extends CraftinpeaceModElements.ModElement {
@@ -18,15 +17,15 @@ public class Configuration extends CraftinpeaceModElements.ModElement {
     super(instance, 38);
     final ForgeConfigSpec.Builder configBuilder = new ForgeConfigSpec.Builder();
 
-	configBuilder.push("general");
-	
+    configBuilder.push("general");
+
     configBuilder.comment("The list of mobs not allowed to spawn.");
     configBuilder.defineList(
       "denyList",
       new ArrayList<String>(),
       val -> val instanceof String
-	);
-	
+    );
+
     configBuilder.pop();
     this.spec = configBuilder.build();
   }
