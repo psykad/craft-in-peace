@@ -3,7 +3,7 @@ loaderVersion="[31,)"
 
 [[mods]]
 modId="craftinpeace"
-version="1.0.1"
+version="1.0.2"
 displayName="Craft in Peace"
 credits="Inspired by BadMobs and Peaceful+!"
 displayURL="https://github.com/psykad/craft-in-peace"

@@ -1,45 +1,38 @@
 package net.mcreator.craftinpeace;
 
 import java.util.ArrayList;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import java.util.List;
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
+import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
-@CraftinpeaceModElements.ModElement.Tag
-public class Configuration extends CraftinpeaceModElements.ModElement {
+public class Configuration {
 
   private ForgeConfigSpec spec;
 
-  public Configuration(CraftinpeaceModElements instance) {
-    super(instance, 38);
+  private ConfigValue<List<? extends String>> denyList;
+
+  public Configuration() {
     final ForgeConfigSpec.Builder configBuilder = new ForgeConfigSpec.Builder();
 
     configBuilder.push("general");
 
     configBuilder.comment("The list of mobs not allowed to spawn.");
-    configBuilder.defineList(
-      "denyList",
-      new ArrayList<String>(),
-      val -> val instanceof String
-    );
+    this.denyList =
+      configBuilder.defineList(
+        "denyList",
+        new ArrayList<String>(),
+        val -> val instanceof String
+      );
 
     configBuilder.pop();
     this.spec = configBuilder.build();
   }
 
-  @Override
-  public void initElements() {}
+  public ForgeConfigSpec getSpec() {
+    return this.spec;
+  }
 
-  @Override
-  public void init(FMLCommonSetupEvent event) {}
-
-  @Override
-  public void serverLoad(FMLServerStartingEvent event) {}
-
-  @OnlyIn(Dist.CLIENT)
-  @Override
-  public void clientLoad(FMLClientSetupEvent event) {}
+  public List<? extends String> getDenyList() {
+    return this.denyList.get();
+  }
 }

@@ -6,6 +6,9 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,51 +17,28 @@ import org.apache.logging.log4j.Logger;
 public class MonsterManager extends CraftinpeaceModElements.ModElement {
 
   public static final Logger log = LogManager.getLogger("MonsterManager");
-  private List<EntityType<?>> deniedEntities = new ArrayList<>();
+  private final Configuration config = new Configuration();
+  private final List<EntityType<?>> deniedEntities = new ArrayList<>();
 
   public MonsterManager(CraftinpeaceModElements instance) {
     super(instance, 12);
-    String[] entityNames = {
-      "blaze",
-      "creeper",
-      "drowned",
-      "elder_guardian",
-      "enderman",
-      "endermite",
-      "evoker",
-      "ghast",
-      "guardian",
-      "hoglin",
-      "husk",
-      "magma_cube",
-      "phantom",
-      "piglin_brute",
-      "pillager",
-      "ravager",
-      "shulker",
-      "shulker_bullet",
-      "silverfish",
-      "skeleton",
-      "slime",
-      "spider",
-      "stray",
-      "vex",
-      "vindicator",
-      "witch",
-      "wither",
-      "wither_skeleton",
-      "zoglin",
-      "zombie",
-      "zombie_villager",
-      "zombie_pigmen",
-    };
+    ModLoadingContext
+      .get()
+      .registerConfig(ModConfig.Type.COMMON, config.getSpec());
+    FMLJavaModLoadingContext
+      .get()
+      .getModEventBus()
+      .addListener(this::onConfigLoaded);
+    MinecraftForge.EVENT_BUS.addListener(this::onEntityJoinWorld);
+  }
 
-    for (String entityName : entityNames) {
+  private void onConfigLoaded(ModConfig.Loading loaded) {
+    log.info("Processing entity deny list...");
+    for (String entityName : config.getDenyList()) {
+      log.info("Adding " + entityName + " to deny list.");
       ResourceLocation entity = ResourceLocation.tryCreate(entityName);
       deniedEntities.add(ForgeRegistries.ENTITIES.getValue(entity));
     }
-
-    MinecraftForge.EVENT_BUS.addListener(this::onEntityJoinWorld);
   }
 
   private void onEntityJoinWorld(EntityJoinWorldEvent event) {

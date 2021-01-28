@@ -591,7 +591,7 @@
   "workspaceSettings": {
     "modid": "craftinpeace",
     "modName": "Craft in Peace",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Peaceful crafting on any difficulty.",
     "author": "Ryan Skeldon",
     "websiteURL": "https://github.com/psykad/craft-in-peace",
